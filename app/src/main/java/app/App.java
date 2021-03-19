@@ -27,16 +27,19 @@ public class App
             System.out.println("delta is negative");
         }
 
-        double result;
-
         for (int v = 1; v <= 100; v++) {
             for (int w = 1; w <= 100; w++) {
-                result = Math.sqrt(v*v+w*w);
-                if(result % 1 == 0)
-                    System.out.println(""+v+" and "+w+" => "+result);
+                calcAndTest(v, w);
             }
         }
-
-        
     }
+
+    public static void calcAndTest(int i, int j)
+    {
+        double result = Math.sqrt(i*i+j*j);
+                if(result % 1 == 0)
+                    System.out.println(""+i+" and "+j+" => "+result);
+    }
+
+
 }
