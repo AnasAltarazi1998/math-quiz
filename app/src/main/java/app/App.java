@@ -26,20 +26,24 @@ public class App
         {
             System.out.println("delta is negative");
         }
-
+        
         for (int v = 1; v <= 100; v++) {
             for (int w = 1; w <= 100; w++) {
-                calcAndTest(v, w);
+                try {
+                    calcAndTest(v, w);
+                } catch (Exception e) {
+                    continue;
+                }
             }
         }
     }
 
-    public static void calcAndTest(int i, int j)
+    public static double calcAndTest(int i, int j) throws Exception
     {
         double result = Math.sqrt(i*i+j*j);
                 if(result % 1 == 0)
-                    System.out.println(""+i+" and "+j+" => "+result);
+                    return result;
+                else throw new Exception();
+                    // System.out.println(""+i+" and "+j+" => "+result);
     }
-
-
 }
