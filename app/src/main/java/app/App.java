@@ -1,22 +1,16 @@
 package app;
 
-import java.io.FileNotFoundException;
-import java.text.NumberFormat;
-
 public class App 
 {
     public static void main( String[] args )
     {   
-       
-          try {
+        try {
            Double[] solves = solveDelta(1, 9, 3);
-           
            for (Double double1 : solves) 
                System.out.println(double1);
         } catch (Exception e) {
             System.out.print(e.getMessage());
         } 
-        
     }
 
     public static Double[] solveDelta(int a, int b, int c) throws Exception {
