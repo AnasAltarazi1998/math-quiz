@@ -19,7 +19,7 @@ public class App
         SimpleDateFormat dateFormat = new SimpleDateFormat("YY ':' m ':' d ':' w ':' K ':' a");
         System.out.println(dateFormat.format(date));
 
-
+        
         
     //     int a = 1,b = 5,c = 2;
     //     double delta, x1, x2;
