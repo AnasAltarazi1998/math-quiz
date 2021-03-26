@@ -1,34 +1,23 @@
 package app;
 
+import java.io.File;
+import java.io.IOException;
+
 public class App 
 {
     public static void main( String[] args )
     {   
-        try {
-           Double[] solves = solveDelta(1, 9, 3);
-           for (Double double1 : solves) 
-               System.out.println(double1);
-        } catch (Exception e) {
-            System.out.print(e.getMessage());
-        } 
-    }
-
-    public static Double[] solveDelta(int a, int b, int c) throws Exception {
-        double delta = b*b - 4*a*c;
-        Double[] solves = new Double[2];
-        if(delta > 0)
-        {
-            solves[0] = (-b-Math.sqrt(delta))/(2*a);
-            solves[1] = (-b+Math.sqrt(delta))/(2*a);
-            return solves;
-        }else if(delta == 0)
-        {
-            solves[0] = Double.valueOf((-b)/(2*a));
-            solves[1] = Double.valueOf((-b)/(2*a));
-            return solves;
-        }else 
-        {
-           throw new Exception("delta less than zero");
+        File f = new File("test123123123.txt");
+       if(!f.exists())
+       {
+            try {
+                f.createNewFile();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         }
+        System.out.print(f.length());
+        System.out.print(f.getAbsolutePath());
     }
 }
