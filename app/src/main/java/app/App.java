@@ -1,24 +1,15 @@
 package app;
 
-import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
+
+import app.model.User;
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args ) throws IOException
     {  
+        User u = new User("name", "email", 20, "password");
+        System.out.print(u.getCreated_at());
      
-            System.out.println("1- resgister \n2- sign in \n3- info");
-            Scanner in = new Scanner(System.in);
-            int select = in.nextInt();
-            switch (select) {
-                case 1:
-                    System.out.print("reg process .....");
-                    break;
-                case 2:
-                    break;
-                default:
-
-                    break;
-        
-        }
     }
 }
